@@ -2,6 +2,8 @@
 
 AN4EMO , un projet de site e-commerce dédié à la vente de composants et accessoires pour PC gamer et portables. Ce site est conçu pour offrir une expérience d'achat fluide et intuitive, permettant aux passionnés de jeux vidéo et aux utilisateurs d'ordinateurs portables de trouver facilement les produits qu'ils recherchent.
 
+![Capture d'écran de l'application](images/screenshot.png)
+
 ## Technologies utilisées
 
 - **Front-end** :
@@ -39,3 +41,8 @@ This project is licensed under the MIT License. See the `LICENSE` file for more 
 
 ## Contact
 If you have any questions or feedback, feel free to reach out to me:
+
+- [![Email](https://img.shields.io/badge/Email-0078D4?style=for-the-badge&logo=gmail&logoColor=white)](mailto:anass.chammami@um5r.ac.ma)
+- [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/anass-chammami-78ab25304/)
+- [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/wh3sly)   
+
