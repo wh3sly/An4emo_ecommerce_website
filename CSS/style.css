@@ -1,0 +1,358 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column; /* Change flex direction to column */
+    min-height: 100vh;
+}
+h1{
+    font-size: 41px;
+}
+header{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0; /* Change to top position */
+    left: 0; /* Change to left position */
+    z-index: 99;
+    box-shadow: 0 0 10px #000;
+    background: rgb(255, 255, 255);
+}
+
+#chk1{
+    display: none;
+     
+     
+}
+
+
+i{
+    color: #000000;
+    cursor: pointer;
+}
+header .logo{
+    flex: 1;
+    color:#000000;
+    margin-left: 50px;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+header .search-box{
+    flex: 1;
+    position: relative;
+}
+.search-box input{
+    width:100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    background:#f2f2f2;
+    border-radius: 30px;
+    color:rgb(0, 0, 0);
+    font-size: 16px;
+    padding-left: 15px;
+    padding-right: 40px;
+    text-align: left;
+     
+}
+ 
+.search-box button{
+    cursor: pointer;
+    width:40px;
+    height: 40px;
+    border-radius: 30px;
+    border:none;
+    position: absolute;
+    top:0;
+    right: 0;
+    transform: scale(0.9);
+    background: rgb(255,45,45);
+    color: #fff;
+}
+header ul {
+    flex:2;
+    display: flex;
+    justify-content: space-evenly;
+}
+header ul li{
+    list-style: none;
+}
+header ul li a{
+    text-decoration: none;
+    color:#000000;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 10px 15px;
+}
+header ul li a:hover{
+    border-bottom: 2px solid rgb(255,45,45);
+}
+
+header .menu{
+    font-size: 2.5em;
+    display: none;
+}
+@media(max-width:1000px){
+    .search-box button{
+        position: absolute;
+    }
+    header ul{
+        position: fixed;
+        top:100px;
+        right: -100%;
+        background: rgba(0,0,0,0.5);
+        height: calc(100vh - 100px);
+        width:50%;
+        flex-direction: column;
+        align-items: center;
+        transition: right 0.5s linear;
+    }
+     
+    header .menu{
+        display: block;
+        width:100px;
+        text-align: center;
+    }
+    #chk1:checked ~ ul{
+        right: 0;
+        
+    }
+  
+}
+
+
+.footer {
+        width: 100%;
+        background: rgb(255,45,45);
+        height: 130px;
+        padding: 20px 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        bottom: 0; /* Change to bottom position */
+        left: 0; /* Change to left position */
+        position: fixed;
+  }
+  
+  .social-icon,
+  .menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0;
+    flex-wrap: wrap;
+  }
+  
+  .social-icon__item,
+  .menu__item {
+    list-style: none;
+  }
+  
+  .social-icon__link {
+    font-size: 2rem;
+    color: #fff;
+    margin: 10px 5px 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+  }
+  .social-icon__link:hover {
+    transform: translateY(-5px);
+  }
+  
+  .menu__link {
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    text-decoration: none;
+    opacity: 0.75;
+    font-weight: 300;
+  }
+  
+  .menu__link:hover {
+    opacity: 1;
+  }
+  
+  .footer p {
+    color: #ffffff;
+    margin: 5px 0 20px 0;
+    font-size: 1rem;
+    font-weight: 300;
+  }
+  
+
+  .wave {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url("https://cdn.discordapp.com/attachments/1227570978524102666/1228188975865401375/20240412_034344.png?ex=662b231e&is=6618ae1e&hm=a832b3468c185ce0a01951c9816a4ea95364cfa4425544d542d08cea1c892649&");
+    background-size: 1000px 100px;
+  }
+  
+  .wave#wave1 {
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWaves 4s linear infinite;
+  }
+  
+  .wave#wave2 {
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animate 4s linear infinite !important;
+  }
+  
+  .wave#wave3 {
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animateWaves 3s linear infinite;
+  }
+  
+  .wave#wave4 {
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animate 3s linear infinite;
+  }
+  
+  @keyframes animateWaves {
+    0% {
+      background-position-x: 1000px;
+    }
+    100% {
+      background-positon-x: 0px;
+    }
+  }
+  
+  @keyframes animate {
+    0% {
+      background-position-x: -1000px;
+    }
+    100% {
+      background-positon-x: 0px;
+    }
+  }
+
+/********** MAIN *******************/
+
+  main {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-column-gap: 30px;
+    margin-top: 65px;
+    margin-bottom: 300px;
+  }
+
+  main .section-title{
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 30px;
+    padding-right: 15px;
+  }
+
+  main .left {
+    border-right: thin solid #d4d4d4;
+  }
+
+  main .left a {
+    display: block;
+    text-decoration: none;
+    color: #555;
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+  }
+  main .left a:hover{
+    text-decoration: underline;
+  }
+
+
+  main .right .product{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+    margin-top: 10px;
+  }
+
+
+  main .right .product-left img{
+    height: 250px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  main .right .title{
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 26px;
+  }
+  main .right .title:hover{
+    text-decoration: underline;
+  }
+  main .right .description{
+    margin-top:  10px;
+    font-size: 16px;
+    font-weight: lighter;
+  }
+
+  main .right .price{
+    margin-top: 15px;
+    color: rgb(255, 0, 0);
+  }
+
+  main .right .panbutton{
+    font-weight: bold;
+    background-color: rgb(255, 45, 45);
+    color: #ffffff;
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: 1px solid black;
+    border-radius: 15px;
+  }
+  main .right .panbutton i{
+    color: #000000;
+    font-size: 17px;
+  }
+  
+  main .right .panbutton:hover,
+  .logbutton:hover{
+    background-color: black;
+    cursor: pointer;
+
+  }
+  main .right .panbutton:hover i{
+    color: #ffffff;
+  }
+
+
+  .logbutton{
+    font-weight: bold;
+    background-color: rgb(255, 45, 45);
+    color: #ffffff;
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: 1px solid black;
+    border-radius: 15px;
+  }
+
+
+
+  
